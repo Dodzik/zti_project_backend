@@ -58,5 +58,4 @@ public class ContactsController {
         return contactService.getAllFilteredContactsForUserId(Integer.parseInt(userId),contactName);
     }
 
-
 }
