@@ -28,7 +28,6 @@ public class UserContactService {
     }
     public void removeRelationWithContactForUser(DeleteContactRequest deleteContactRequest) {
         log.info(Integer.parseInt(deleteContactRequest.getUserId())+" " + Integer.parseInt(deleteContactRequest.getContactId()));
-//        userContactRepository.deleteUserContactByUserIdAndContactId(Integer.parseInt(deleteContactRequest.getUserId()), Integer.parseInt(deleteContactRequest.getContactId()));
         userContactRepository.deleteAll(userContactRepository.getUserContactByUserIdAndContactId(Integer.parseInt(deleteContactRequest.getUserId()), Integer.parseInt(deleteContactRequest.getContactId())));
     }
 

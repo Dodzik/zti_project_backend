@@ -6,11 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import zti.project.Request.CreateCallRequest;
 import zti.project.Request.IdRequest;
-import zti.project.Response.CallwithNames;
 import zti.project.model.Contact;
 import zti.project.model.TalkHistory;
 import zti.project.model.User;
-import zti.project.model.UserContact;
 
 import java.util.List;
 
@@ -80,7 +78,6 @@ public class TalkHistoryService {
                 }
             }
         }
-        log.info("new function");
 
         return userCalls;
     }

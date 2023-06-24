@@ -6,8 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zti.project.Request.CreateCallRequest;
 import zti.project.Request.IdRequest;
-import zti.project.Response.CallwithNames;
-import zti.project.model.Contact;
 import zti.project.model.TalkHistory;
 import zti.project.repository.TalkHistoryService;
 
@@ -37,7 +35,6 @@ public class TalkController {
 
     @GetMapping("/getAllCallsWithNames/{userId}")
     public List<TalkHistory> getAllUserCallsWithNames(@PathVariable String userId) {
-//        return talkHistoryService.getAllCallsForUser(Integer.parseInt(userId));
         return talkHistoryService.getCallsWithNames(Integer.parseInt(userId));
     }
 
